@@ -1,0 +1,26 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/tc/**",
+      "**/node_modules/**",
+      "**/.git/**",
+      ".gitignore",
+      "**/tax data/**",
+      ".firebaserc"
+    ],
+
+    "headers" : [ {
+      "source": "**",
+      "headers" : [
+        { "key" : "X-Frame-Options", "value" : "deny" },
+        { "key" : "X-Content-Type-Options", "value" : "nosniff" },
+        { "key" : "X-XSS-Protection", "value" : "1; mode=block" },
+        { "key" : "Referrer-Policy", "value" : "no-referrer" }
+      ]
+    }]
+  }
+}

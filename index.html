@@ -11,10 +11,10 @@
   <title>Prolog Income Tax Calculator</title>
   
   <!--Font Awsome-->
-  <link rel="stylesheet" 
+  <!--<link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" 
     integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" 
-    crossorigin="anonymous" />
+    crossorigin="anonymous" />-->
 
 
   <!-- Bootstrap core CSS -->
@@ -22,6 +22,12 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.3/lux/bootstrap.min.css" 
     integrity="sha512-T8UuP+yWshtlRixgVqhXTZ1F31Hf4Gh9IYuEdlq0ttpXexFziXoeGOfUwpNs+P+FlxFxDAFxL3xsWwgi/LAj5w==" 
     crossorigin="anonymous" />
+  
+  <!--Preload the prolog file-->
+  <link rel="preload" href="knowledge-base.pl" as="fetch" crossOrigin="anonymous">
+  <!--Font preloading-->
+  <link rel="preload" href="https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc9iB85tU1E.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I9s.woff2" as="font" crossorigin="anonymous">
 
 </head>
 
@@ -43,7 +49,7 @@
               <div class="input-group-prepend">
                 <div class="input-group-text">$</div>
               </div> 
-              <input id="income" name="income" placeholder="15000.00" type="text" class="form-control" aria-describedby="incomeHelpBlock" required="required">
+              <input id="income" name="income" placeholder="15000.00" type="number" class="form-control" aria-describedby="incomeHelpBlock" required="required">
             </div> 
             <span id="incomeHelpBlock" class="form-text text-muted">The net income of the person</span>
           </div>
@@ -53,7 +59,7 @@
               <select id="frequency" name="frequency" class="custom-select" aria-describedby="frequencyHelpBlock" required="required">
                 <option value="daily">Daily</option>
                 <option value="weekly">Weekly</option>
-                <option value="tendays">Every 10 days</option>
+                <option value="tenday">Every 10 days</option>
                 <option value="biweekly">Biweekly (aka quincena)</option>
                 <option value="monthly">Monthly</option>
                 <option value="yearly">Yearly</option>
