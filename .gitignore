@@ -1,0 +1,8 @@
+.vscode
+tc
+*.cpp
+*.c
+*.cache
+node_modules
+*.cache
+.firebase
