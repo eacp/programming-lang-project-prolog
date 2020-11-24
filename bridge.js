@@ -35,6 +35,12 @@ const calc = () => {
     const period = periodField.value;
     const year = yearField.value;
 
+    // Validate not empty
+    if(!income || income == null || income.length == 0) {
+        alert("Invalid input on Income");
+        return;
+    }
+
     // Make the query
     const q = makeQuery(income,period, year);
     // Execute the query
