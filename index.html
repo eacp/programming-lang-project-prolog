@@ -44,28 +44,58 @@
         <p >Eduardo Andrés Castillo Perera</p>
         
         <div class="form-group">
-            <label for="income">Income</label> 
+          <br>
+            <label for="income">Income (in local currency)</label> 
             <div class="input-group">
               <div class="input-group-prepend">
                 <div class="input-group-text">$</div>
               </div> 
               <input id="income" name="income" placeholder="15000.00" type="number" class="form-control" aria-describedby="incomeHelpBlock" required="required">
             </div> 
-            <span id="incomeHelpBlock" class="form-text text-muted">The net income of the person</span>
+            <span id="incomeHelpBlock" class="form-text text-muted">The net income of the person. It should be in his/her local currency. </span>
           </div>
           <div class="form-group">
-            <label for="frequency">Frequency</label> 
+
+            <!--Frequency Selector-->
+            <br>
+            <label for="frequency">Frequency and Country</label>
             <div>
               <select id="frequency" name="frequency" class="custom-select" aria-describedby="frequencyHelpBlock" required="required">
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-                <option value="tenday">Every 10 days</option>
-                <option value="biweekly">Biweekly (aka quincena)</option>
-                <option value="monthly">Monthly</option>
-                <option value="yearly">Yearly</option>
+
+                <option disabled>──Mexico 🇲🇽 ──</option>
+
+                <option value="daily">🇲🇽 Daily</option>
+                <option value="weekly">🇲🇽 Weekly</option>
+                <option value="tenday">🇲🇽 Every 10 days</option>
+                <option value="biweekly">🇲🇽 Biweekly (aka quincena)</option>
+                <option value="monthly">🇲🇽 Monthly</option>
+                <option value="yearly">🇲🇽 Yearly</option>
+
+
+                <option disabled>──United States (Single Fillers) 🇺🇸 ──</option>
+
+                <option value="usyearly">🇺🇸 Yearly (Single)</option>
               </select> 
-              <span id="frequencyHelpBlock" class="form-text text-muted">How often do you pay the employee</span>
+              <span id="frequencyHelpBlock" class="form-text text-muted">How often do you pay the employee.
+                <br>
+                Mexican and American taxes are calculated differently. 
+                For the US, only yearly calculation is available. However, the Prolog Knowledge base can be easily expanded.</span>
             </div>
+
+            <!--Year Selector-->
+            <br>
+            <label for="year">Year</label>
+            <div>
+              <select id="year" name="year" class="custom-select" aria-describedby="yearHelpBlock" required="required">
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+              </select> 
+              <span id="yearHelpBlock" class="form-text text-muted">When does the payment happen?</span>
+            </div>
+
+
           </div> 
           <div class="form-group">
             <button id="calcButton" class="btn btn-primary">Calculate</button>
@@ -82,7 +112,7 @@
   <script src="https://cdn.jsdelivr.net/npm/tau-prolog@0.3.0/modules/core.min.js"></script>
 
   <!--The script that will allow us to use Prolog :D-->
-  <script src="bridge.min.js"></script>
+  <script src="bridge.js"></script>
 
 
 </body>
